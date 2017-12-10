@@ -1,0 +1,22 @@
+<div class='card hover-pointer'>
+  <div class='background'>
+    <div class='background-image' style='background-image: url("<%- cover %>"); background-size: 100% 100%;'></div>
+    <div class='background-overlay display-none'></div>
+  </div>
+
+  <div class='content border <%- favorite ? "border-red" : "border-transparent" %>'>
+    <% if (favorite) { %>
+      <img src='images/heart_on.png' class='heart'/>
+    <% } else { %>
+      <img src='images/heart_off.png' class='heart hover display-none'/>
+    <% } %>
+    <div class='middle'></div>
+    <div class='title-info display-none'>
+      <div class='title'> <%- titleInfo['title'] %></div>
+      <div class='issue-number'> <%- titleInfo['issueNumber'] %></div>
+      <div class='year'> <%- titleInfo['year'] %></div>
+    </div>
+  </div>
+
+</div>
+
